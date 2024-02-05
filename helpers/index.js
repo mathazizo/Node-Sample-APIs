@@ -7,9 +7,9 @@ export const hashPassword = password => {
 
 export const compareHashPassword = (password, hashedPassword) => {
   if (hashPassword(password) === hashedPassword) {
-      return { success: true, message: 'Password matched' }
+      return true //{ success: true, message: 'Password matched' }
   }
-  return { success: false, message: 'Password not matched' }
+  return false //{ success: false, message: 'Password not matched' }
 }
 
 export const responseSuccess = (msg, data = null) => {
